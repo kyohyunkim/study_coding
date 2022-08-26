@@ -389,7 +389,23 @@ h1 {
     border: 1px solid #222;
 }
 .container .btn2-4:hover{
-    color: #ccc4b9;
+    /* transform: translateY(-7px); */
     background-color: #222;
 }
 
+.container .btn2-4::after{
+    content:"HOVER ME";
+    position: absolute;
+    color:#222;
+    line-height: 40px;
+    width:180px;height: 40px;
+    background-color: #ccc4b9;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+}
+.container .btn2-4:hover::after{
+    content:"CLICK ME";
+    background-color: #222;
+    color:#ccc4b9;
+}
