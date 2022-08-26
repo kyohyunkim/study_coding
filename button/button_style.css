@@ -16,6 +16,7 @@ body {
 h1 {
     padding: 100px 0;
     text-align: center;
+    font-weight: 500;
 }
 
 .container {
@@ -26,6 +27,9 @@ h1 {
     flex-wrap: wrap;
     margin: 0 auto;
     flex-wrap: wrap;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #222;
 }
 
 .container .btn{
@@ -263,5 +267,129 @@ h1 {
     -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
+}
+
+
+
+.container .btn2-1{
+    position: relative;
+    cursor: pointer;
+    width:180px;height:40px;
+    border-radius: 20px;
+    background-color: #222;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    border: 1px solid #222;
+    margin:10px;
+}
+.container .btn2-1 span{color:#ccc4b9;}
+.container .btn2-1::after{
+    content:"HOVER ME";
+    position: absolute;
+    color:#222;
+    line-height: 40px;
+    width:180px;height: 40px;
+    background-color: #ccc4b9;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+}
+.container .btn2-1:hover::after{
+    content:"";
+    position: absolute;
+    width:20px;height:20px;
+    border-radius: 50px;
+    background-color: #ccc4b9;
+    top:50%;left:10px;
+    transform: translate(0%,-50%);
+}
+
+
+
+.container .btn2-2{
+    position: relative;
+    cursor: pointer;
+    width:180px;height:40px;
+    border-radius: 20px;
+    background-color: #ccc4b9;
+    color:#222;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    margin:10px;
+    transition: .5s;
+    border: 1px solid #222;
+}
+
+.container .btn2-2::after{
+    content:"CLICK ME";
+    position: absolute;
+    color:#ccc4b9;
+    line-height: 40px;
+    width:180px;height: 40px;
+    background-color: #222;
+    top:0%;left:50%;
+    transform: translate(-50%,-100%);
+    transition: .3s;
+}
+.container .btn2-2:hover::after{
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+.container .btn2-3{
+    position: relative;
+    cursor: pointer;
+    width:180px;height:40px;
+    border-radius: 20px;
+    background-color: #ccc4b9;
+    color:#222;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    margin:10px;
+    transition: .5s;
+    border: 1px solid #222;
+}
+
+.container .btn2-3::after{
+    content:"";
+    position: absolute;
+    color:#ccc4b9;
+    line-height: 40px;
+    width:0px;height: 40px;
+    background-color: #222;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+}
+.container .btn2-3:hover::after{
+    content:"CLICK ME";
+    width:180px;
+}
+
+
+
+
+.container .btn2-4{
+    position: relative;
+    cursor: pointer;
+    width:180px;height:40px;
+    border-radius: 20px;
+    background-color: hsl(35, 16%, 76%);
+    color:#222;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    margin:10px;
+    transition: .5s;
+    border: 1px solid #222;
+}
+.container .btn2-4:hover{
+    color: #ccc4b9;
+    background-color: #222;
 }
 
