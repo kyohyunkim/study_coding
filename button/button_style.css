@@ -4,6 +4,8 @@
     list-style: none;
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
+    box-sizing: border-box;
+    text-transform: uppercase;
 }
 
 body {
@@ -13,179 +15,253 @@ body {
 
 h1 {
     padding: 100px 0;
+    text-align: center;
 }
 
-/*button style_1*/
-.button_style_1 .btn_wrap {
-    position: relative;
-    border: 1px solid #000;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 180px;
-    height: 60px;
-    overflow: hidden;
-}
-
-.btn_wrap.move {
-    animation: moving5 1s forwards;
-    animation-delay: .4s;
-}
-
-.btn {
-    position: absolute;
-    cursor: pointer;
-    border-radius: 15px;
-    width: 180px;
-    height: 60px;
-}
-
-.btn p:nth-of-type(1) {
-    width: 20px;
-    height: 20px;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    left: -15%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    border-radius: 50px;
-}
-
-.btn p:nth-of-type(1).active {
-    animation: btnmove_left 1.5s forwards;
-}
-
-.btn div {
-    position: absolute;
-    z-index: 6;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #000;
-    width: 100%;
+.container {
     display: flex;
     justify-content: center;
-    font-size: 20px;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-.btn div span {
-    transform: translate(5px, -2px);
+.container .btn{
+    cursor: pointer;
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    max-width:210px;
+    min-width:210px;
 }
 
-.btn div.active {
-    animation: 1.2s btnmove_div_gong forwards;
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.container .btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
 }
 
-.btn p:nth-of-type(2) {
-    width: 20px;
-    height: 20px;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    right: -15%;
-    transform: translate(50%, -50%);
-    z-index: 5;
+.container .btn-1 {
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.container .btn-2 {
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+.container .btn-3 {
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+.container .btn-4 {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+.container .btn-5 {
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+}
+.container .btn-6{
+    padding:29px;
+    background: #222222;
+    overflow: hidden;
+    position: relative;
+    border:1px solid #222222;
+}
+.container .btn-6 span{
+    position: relative;
+    z-index: 99;
+}
+.container .btn-6:hover{color: #222222;}
+.container .btn-6::after{
+    content: "";
+    position:absolute;
+    top:50%;right:50%;
+    width:15px;height:15px;
+    background-color: #222222;
     border-radius: 50px;
+    transform: translate(50%,-50%);
+    transition: .7s;
+}
+.container .btn-6:hover::after{
+    background-color: #fff;
+    transform: translate(50%,-50%) scale(15);
 }
 
-.btn p:nth-of-type(2).active {
-    animation: btnmove_right 1.2s forwards;
+.container .btn-7{
+    padding:29px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    color:#222;
+    border:1px solid #222;
+}
+.container .btn-7 span{
+    position: relative;
+    z-index: 99;
+}
+.container .btn-7:hover{color: #fff;}
+.container .btn-7::after{
+    content: "";
+    position:absolute;
+    top:50%;left:-100%;
+    width:210px;height:80px;
+    background-color: #222;
+    border-radius:0px;
+    transform: translate(-50%,-50%);
+    transition: .7s;
+}
+.container .btn-7:hover::after{
+    left:50%;
 }
 
-@-webkit-keyframes btnmove_left {
-    40% {
-        left: 50%;
-        width: 20px;
-        height: 20px;
-    }
-
-    100% {
-        left: 50%;
-        width: 200px;
-        height: 100px;
-    }
+.container .btn-8{
+    width:210px;height:80px;
+    overflow: hidden;
+    position: relative;
+    color:#fff;
+    border:1px solid #003674;
+}
+.container .btn-8 span{
+    width: 100%;
+    position: absolute;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    color:#003674;
+}
+.container .btn-8 button {
+    position:absolute;
+    top:50%;left:50%;
+    width:220px;height:90px;
+    transform: translate(-50%,-50%);
+    background: #003674;
+    -webkit-mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+    mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+    font-size: 16px;
+    font-weight: 300;
+}
+.container .btn-8 button:hover{
+    animation: ani 0.7s steps(70) forwards;
 }
 
-@keyframes btnmove_left {
-    40% {
-        left: 50%;
-        width: 20px;
-        height: 20px;
-    }
 
-    100% {
-        left: 50%;
-        width: 200px;
-        height: 100px;
-    }
+.container .btn-9{
+    width:210px;height:80px;
+    overflow: hidden;
+    position: relative;
+    color:#fff;
+    border:1px solid #a80c0c;
+}
+.container .btn-9 span{
+    width: 100%;
+    position: absolute;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    color:#a80c0c;
+}
+.container .btn-9 button {
+    position:absolute;
+    top:50%;left:50%;
+    width:220px;height:90px;
+    transform: translate(-50%,-50%);
+    background: #a80c0c;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+    font-size: 16px;
+    font-weight: 300;
+}
+.container .btn-9 button:hover{
+    -webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;
 }
 
-@-webkit-keyframes btnmove_right {
-    40% {
-        right: 50%;
-        width: 20px;
-        height: 20px;
-    }
 
-    100% {
-        right: 50%;
-        width: 200px;
-        height: 100px;
-    }
+
+.container .btn-10{
+    width:210px;height:80px;
+    overflow: hidden;
+    position: relative;
+    color:#fff;
+    border:1px solid #0c4218;
+}
+.container .btn-10 span{
+    width: 100%;
+    position: absolute;
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    color:#0c4218;
+}
+.container .btn-10 button {
+    position:absolute;
+    top:50%;left:50%;
+    width:220px;height:90px;
+    transform: translate(-50%,-50%);
+    background: #0c4218;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    -webkit-mask-size: 3000% 100%;
+    mask-size: 3000% 100%;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(29) forwards;
+    animation: ani2 0.7s steps(29) forwards;
+    font-size: 16px;
+    font-weight: 300;
+}
+.container .btn-10 button:hover{
+    -webkit-animation: ani 0.7s steps(29) forwards;
+    animation: ani 0.7s steps(29) forwards;
 }
 
-@keyframes btnmove_right {
-    40% {
-        right: 50%;
-        width: 20px;
-        height: 20px;
-    }
 
-    100% {
-        right: 50%;
-        width: 200px;
-        height: 100px;
-    }
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
 }
 
-@-webkit-keyframes btnmove_div {
-    40% {
-        color: #7e1e1a;
-    }
 
-    100% {
-        color: #fff;
-    }
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
 }
 
-@keyframes btnmove_div {
-    40% {
-        color: #7e1e1a;
-    }
-
-    100% {
-        color: #fff;
-    }
-}
-
-@-webkit-keyframes btnmove_div_gong {
-    40% {
-        color: #000;
-    }
-
-    100% {
-        color: #fff;
-    }
-}
-
-@keyframes btnmove_div_gong {
-    40% {
-        color: #000;
-    }
-
-    100% {
-        color: #fff;
-    }
-}
-
-/*button style_1*/
