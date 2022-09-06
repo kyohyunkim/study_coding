@@ -1,7 +1,7 @@
 window.onload = function(){
     
 //modal// 
-    const modalNavBtn =  document.querySelector('.modal_nav_btn');
+const modalNavBtn =  document.querySelector('.modal_nav_btn');
 const modalNav =  document.querySelector('.modal_nav');
 const modalPop =  document.querySelector('.modal_nav_btn_pop');
 modalNavBtn.addEventListener('click',function(){
@@ -86,6 +86,7 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
 
     //기본질문
     if (_thisA.attr('step') >= 12) {
+        
         _nextQ.removeClass('active');
         _nextA.removeClass('active');
 
@@ -100,7 +101,7 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
             counterFn();
 
             function counterFn() {
-                id0 = setInterval(count0Fn, 300);
+                id0 = setInterval(count0Fn, 100);
                 function count0Fn() {
                     cnt0 = cnt0 + 12;
                     if (cnt0 > 100) {
@@ -217,52 +218,6 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
         
     });
 
-
-
-
-});
-$('.fit-content').on('keyup', '#height, #weight', function () {
-    $(this).parent().parent().addClass('last');
-});
-
-// bmi체크
-$('.fit-content').on('click', '.bmi-chk', function () {
-    
-    var _height = $('input[name=height]').val(),
-        _weight = $('input[name=weight]').val(),
-        height_p = _height / 100,
-        bmi = (_weight / (height_p * height_p)).toFixed(2);
-
-    $('.fit-result-summary .bear.type01').hide();
-    $('.fit-result-summary .bear.type02').show();
-
-    if(_height=='' || _weight==''){
-        alert("키와 몸무게를 입력해주세요!");
-        return false;
-    }
-
-    if (bmi >= 0 && bmi <= 18.59) {
-        $('.fit-result-summary .bmi').html("저체중")
-        $('.gauge-wrap .bar, .gauge-wrap .bar div').addClass('w10');
-    } else if (bmi >= 18.6 && bmi <= 22.99) {
-        $('.fit-result-summary .bmi').html("정상")
-        $('.gauge-wrap .bar, .gauge-wrap .bar div').addClass('w50');
-    } else if (bmi >= 23 & bmi <= 24.99) {
-        $('.fit-result-summary .bmi').html("과체중")
-        $('.gauge-wrap .bar, .gauge-wrap .bar div').addClass('w60');
-    } else if (bmi >= 25 & bmi <= 29.99) {
-        $('.fit-result-summary .bmi').html("1단계비만")
-        $('.gauge-wrap .bar, .gauge-wrap .bar div').addClass('w80');
-    } else if (bmi >= 30 & bmi <= 34.99) {
-        $('.fit-result-summary .bmi').html("2단계비만")
-        $('.gauge-wrap .bar, .gauge-wrap .bar div').addClass('w90');
-    } else if (bmi >= 35) {
-        $('.fit-result-summary .bmi').html("고도비만")
-        $('.gauge-wrap .bar, .gauge-wrap .bar div').addClass('w100');
-    }
-
-
-    $('.fit-result-summary .desc').append('<span class="bmi-num">BMI 결과 : ' +bmi+ '</span>')
 
     
     // $(".summary-info").each(function(){
