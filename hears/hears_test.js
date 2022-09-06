@@ -2,6 +2,7 @@ window.onload = function(){
 $('.btn-start').click(function () {
     $('#fitstartWrap .fit-start').hide();
     $('#fittestWrap .fittest').addClass('active');
+
 });
 
 // 질문 답변 순차적으로 보여지기
@@ -22,13 +23,19 @@ function pick_up() {
 }
 
 //활력 관련 질문
-var interest01 = `<div class="step-answer type2 pick" step="8">
-<div class="fit-question sub-first"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>예전보다 활력(에너지)이 많이 떨어지셨나요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>무기력해 보인다는 말을 자주 들으시나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>혈압이 높아지는 일이 잦으신가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>평소 몸이 차거나 저리시는 적이 많나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>평소 노화가 걱정되시나요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div></div>`
-
+var interest01 = `
+<div class="step-answer type2 pick" step="4">
+<div class="fit-question sub-first"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠들어도 새벽에 가끔 깬 적이 있으신가요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>8시간을 자도 아침에 졸리고 피곤함을 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>불규칙한 일상으로 생활리듬을<br>정상적으로 되돌리고 싶은가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠에 쉽게 들지 못하는 편인가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠들기 전 많은 생각과 고민으로 어려움을 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠이 안와서 스트레스와 우울감을 느낀 적이 있나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>밤낮이 바뀐 올빼미 생활을 하고 있나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>항상 잠이 부족하다고 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">뉴럴냅스</p></div><div class="fit-msg"><div class="fit-msg-item"><p>점점 취침시간이 늦어지고 새벽에 깨는 현상이 있나요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
+</div>
+`
 //체중 관련 질문
 var interest02 = `<div class="step-answer type3 pick" step="8">
 <div class="fit-question sub-first"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>체중 감량 계획이 있으신가요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>

@@ -1,10 +1,20 @@
 window.onload = function(){
-const modalNavBtn =  document.querySelector('.modal_nav_btn');
+    
+//modal// 
+    const modalNavBtn =  document.querySelector('.modal_nav_btn');
 const modalNav =  document.querySelector('.modal_nav');
+const modalPop =  document.querySelector('.modal_nav_btn_pop');
 modalNavBtn.addEventListener('click',function(){
     modalNavBtn.classList.toggle('active');
     modalNav.classList.toggle('active');
 });
+modalPop.addEventListener('click',function(){
+    new_fixed.classList.add('active');
+})
+for(let m=0; m<modal_close.length; m++){
+modal_close[m].addEventListener('click',function(){new_fixed.classList.remove('active');})
+}
+//modal// 
 
 $('.btn-start').click(function () {
     $('#fitstartWrap .fit-start').hide();
@@ -27,31 +37,6 @@ function pick_up() {
     setTimeout(function () { $('.pick .fit-question.active .fit-msg-item:last-child').addClass('up'); }, 400);
     setTimeout(function () { $('.pick .fit-choice.active').addClass('up'); }, 800);
 }
-
-//활력 관련 질문
-var interest01 = `<div class="step-answer type2 pick" step="8">
-<div class="fit-question sub-first"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>예전보다 활력(에너지)이 많이 떨어지셨나요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>무기력해 보인다는 말을 자주 들으시나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>혈압이 높아지는 일이 잦으신가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>평소 몸이 차거나 저리시는 적이 많나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>평소 노화가 걱정되시나요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div></div>`
-
-//체중 관련 질문
-var interest02 = `<div class="step-answer type3 pick" step="8">
-<div class="fit-question sub-first"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>체중 감량 계획이 있으신가요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>체중조절을 위해 최소 30분 이상 신체활동(운동)을 하고 계시나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>평소에 군것질(과자, 음료 등)을 좋아하나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>주로 육류(소고기, 돼지고기 등) 위주의 메뉴를 선택하시나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>키와 몸무게를 입력해주세요.</p></div></div></div><div class="fit-choice"><div class="input-wrap"><input type="number" name="height" min="0" id="height" min="10">cm <br> <input type="number" name="weight" min="0" id="weight">kg </div><div class="fit-choice-item bmi-chk"><a href="javascript:void(0)">NEXT</a></div></div></div>`
-
-//음주 관련 질문
-var interest03 = `<div class="step-answer type4 pick" step="8">
-<div class="fit-question sub-first"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>음주를 좋아하시나요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>술자리를 가질 때, 보통 얼마나 섭취 하시나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">1~2잔</a></div><div class="fit-choice-item"><a href="javascript:void(0)">3잔 이상</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>음주 후, 다음 날 숙취 때문에 고생 한 적이 많은가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>과중한 학업이나 잦은 야근으로 인해 피곤하신가요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div></div>`
-
-
 
 
 //순위매기기
@@ -77,71 +62,18 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
         answerPick = _this.attr('answer'),
         resultPick = $('.fit-result').attr('result');
 
-    //스텝4번 => 선택의 기로
-    if (_thisA.attr('step') == 4) {
-        _this.addClass('active');
-
-        // 세개선택가능
-        var stepCnt = $('.result-fit .fit-choice-item.active').length;
-
-        var _isCnt = false;
-        if (!_isCnt) {
-            _isCnt = true;
-
-            //선택 갯수 정하기 ->  일단 1개만 선택할게요
-            if (stepCnt >= 1) {
-                _nextQ.addClass('active');
-                _nextA.addClass('active');
-
-                //세개 이상 클릭 시 클릭 액티브 막기
-                $('.result-fit .fit-choice-item').css('pointer-events', 'none')
-            } else {
-                _nextQ.removeClass('active');
-                _nextA.removeClass('active');
-
-            }
-            //선택 갯수 정하기
-            //한개 이상 클릭 시 클릭 액티브 막기
-            if (stepCnt > 1) {
-                _this.removeClass('active');
-            }
-            setTimeout(function () { _isCnt = false; }, 200);
-        }
-
-        if (answerPick == 2) { //테스트1번 선택시 활력 관련 질문 나와요
-            $('.step-answer.type2').remove();
-            $('.fit-content').append(interest01);
-            $('.fit-result-list-wrap .fit-result.type1').removeClass('active');
-        }
-        if (answerPick == 3) { //테스트2번 선택시 체중 관련 질문 나와요
-            $('.step-answer.type3').remove();
-            $('.fit-content').append(interest02);
-            $('.fit-result-list-wrap .fit-result.type1').removeClass('active');
-        }
-        if (answerPick == 4) { // 테스트3번 선택시 음주관련 질문 나와요
-            $('.step-answer.type4').remove();
-            $('.fit-content').append(interest03);
-            $('.fit-result-list-wrap .fit-result.type1').removeClass('active');
-        }
         
+    //스텝4번 => 선택의 기로
+    if (_thisA.attr('step') == 13) {
+        _this.addClass('active');
+        
+        $('.fit-content').append(interest01);
+        _nextQ.removeClass('active');
+        _nextA.removeClass('active');
 
-        //다시 선택
-        $('.reset').click(function () {
-            $('.result-fit .fit-choice-item').removeClass('active')
-            $('.step-answer').remove();
-            $('.result-fit~.fit-question').removeClass('active');
-            $('.result-fit~.fit-choice').removeClass('active');
-            $('.result-fit~.fit-choice .fit-choice-item').removeClass('active');
-            $('.result-fit~.fit-choice .fit-choice-item').css('display', '');
-            $('.result-fit~.fit-question .fit-msg .fit-msg-item').removeClass('up');
-            $('.result-fit~.fit-choice').removeClass('up')
-
-            $('.fit-result').removeClass('active');
-
-            $('.result-fit .fit-choice-item').css('pointer-events', '')
-            $('.count').remove();
-            index = 0;
-        });
+        _nextSubQ.addClass('active');
+        _nextSubA.addClass('active');
+        
     } else {
         _this.addClass('active');
         _this.siblings('.fit-choice-item').css('display', 'none');
@@ -150,9 +82,10 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
         _nextA.addClass('active');
 
     }
+    
 
     //기본질문
-    if (_thisA.attr('step') >= 7) {
+    if (_thisA.attr('step') >= 12) {
         _nextQ.removeClass('active');
         _nextA.removeClass('active');
 
@@ -162,14 +95,14 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
         //끝났어요~
         if (!_nextSubQ.hasClass('active')) {
             $('.fit-content-wrap').hide();
-            //$('.fit-result-wrap').show();
+            $('.fit-result-wrap').show();
             var cnt0 = 0;
             counterFn();
 
             function counterFn() {
                 id0 = setInterval(count0Fn, 300);
                 function count0Fn() {
-                    cnt0 = cnt0 + 7;
+                    cnt0 = cnt0 + 12;
                     if (cnt0 > 100) {
                         clearInterval(id0);
                         $('.fit-loading').hide();
@@ -196,9 +129,9 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
             counterFn();
 
             function counterFn() {
-                id0 = setInterval(count0Fn, 300);
+                id0 = setInterval(count0Fn, 100);
                 function count0Fn() {
-                    cnt0 = cnt0 + 7;
+                    cnt0 = cnt0;
                     if (cnt0 > 100) {
                         clearInterval(id0);
                         $('.fit-loading').hide();

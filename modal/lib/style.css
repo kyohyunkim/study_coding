@@ -15,8 +15,19 @@
 .modal_nav_btn{position: absolute;bottom:0;left:0;transition: .2s;}
 .modal_nav_btn.active{transform: rotate(45deg);}
 .modal_nav_btn_pop{position: absolute;top:-50px; cursor: pointer;}
-.modal_nav_btn.active{
 
+#new_fixed{
+    position: fixed;
+    height:80vh;
+    max-width: 500px;
+    bottom:-100%;right:0;
+    transition: .5s;
+    border-radius: 30px 30px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+}
+#new_fixed.active{
+    bottom:0;
 }
 
 .btn-start a { background:#c8b68a; display:block; color:#fff; font-weight:600; font-size:18px; padding:14px 0 16px; text-align:center; border-radius:40px; margin-bottom:10px; border:2px solid #c8b68a; }
@@ -24,10 +35,11 @@
 
 .close { position:absolute; right:30px; top:30px; z-index:50; }
 
-#fitWrap { position:relative; background:#ded8c9; max-width:500px; margin:0 auto; height:100vh; }
-#fitWrap.active {  }
+#fitWrap {position:relative; background:#ded8c9; max-width:500px; margin:0 auto; height:100vh; border-radius: 30px 30px 0 0;}
+#fitWrap::-webkit-scrollbar {display: none;}
 
-#fitstartWrap .fit-start { display:-webkit-flex; display:flex; flex-wrap:wrap; align-items:center; width:100%; height:100vh; padding:0 7%; }
+#fitstartWrap .fit-start { display:-webkit-flex; display:flex; flex-wrap:wrap; align-items:center; width:100%; height:100vh; padding:0 7%  150px; overflow-y: scroll; }
+#fitstartWrap .fit-start::-webkit-scrollbar {display: none;}
 #fitstartWrap .fit-start .start-con { width:100%; }
 #fitstartWrap .tit { font-size:28px; color:#676767; font-weight:600; line-height:1.24; padding-bottom:20px;padding-top:20px; }
 #fitstartWrap .sub-tit { font-size:16px; color:#676767; line-height:1.46; }
@@ -41,7 +53,6 @@
     height:100vh;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
 }
 #fittestWrap .fittest.active { display:block; }
 #fittestWrap .fittest .inner { width:100%; height:100%; }
@@ -51,7 +62,7 @@
     height:100%;
     position: relative;
     z-index: 1; }
-.fit-content-wrap .fit-content-inner { width:100%; height:100%; position:relative; overflow:auto; padding:0 7%; }
+.fit-content-wrap .fit-content-inner { width:100%; height:100%; position:relative; overflow:auto; padding:0 7% 200px; }
 
 .fit-content-wrap .fit-content-inner::-webkit-scrollbar { width:3px; background-color:rgb(0,0,0, .1); }
 .fit-content-wrap .fit-content-inner::-webkit-scrollbar-thumb { background-color:rgb(0,0,0, .2); }
@@ -90,7 +101,7 @@
 
 
 
-.fit-loading { display:-webkit-flex; display:flex; flex-wrap:wrap; align-items:center; width:100%; height:100vh; padding:7%; }
+.fit-loading { display:-webkit-flex; display:flex; flex-wrap:wrap; align-items:center; width:100%; height:80vh; padding:7%; }
 .fit-loading .title { font-size:28px; font-weight:600; color:#676767; line-height:1.24; }
 .fit-loading .igloo { padding-top:120px; padding-bottom:50px; }
 .fit-loading .percent { text-align:center; font-size:32px; font-weight:600; color:#bca366; padding-bottom:80px; }
@@ -101,7 +112,7 @@
 /* .fit-result-summary { display:-webkit-flex; display:flex; flex-wrap:wrap; align-items:center; width:100%; height:100vh; padding:0 7%; } */
 .fit-result-summary { 
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 0;
     min-height: 500px;
     overflow-y: scroll;
@@ -154,7 +165,8 @@
 
 
 #fitresultWrap { display:none; background:#fff; }
-#fitresultWrap.active { display:block; }
+#fitresultWrap.active { display:block;overflow-y: scroll;height:80vh;}
+#fitresultWrap.active::-webkit-scrollbar {display: none;}
 
 #fitresultWrap .inner::-webkit-scrollbar,
 .fit-result-summary::-webkit-scrollbar { width:3px; background-color:rgb(0,0,0, .1); }
@@ -243,7 +255,7 @@ body::-webkit-scrollbar-track{ background:#ded8c9;}
     .fit-msg .fit-msg-item p { font-size:14px; }
     .fit-choice .fit-choice-item a { font-size:14px; }
     
-    #fitresultWrap .inner { padding:80px 0; }
+    #fitresultWrap .inner { padding:80px 0 0; height:100%;}
     #fitresultWrap .tit-wrap { padding-left:10%; padding-bottom:50px; }
     #fitresultWrap .tit-wrap .title { font-size:26px; padding-bottom:15px; } 
     #fitresultWrap .tit-wrap .sub-title { font-size:16px; }

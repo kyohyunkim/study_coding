@@ -13,25 +13,29 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <title>히이즈</title>
+    <title>뉴럴냅스</title>
 </head>
 <body>
 
-
+    <!-- 팝업 네비게이션 -->
     <div class="modal_nav">
         <div class="modal_wrap">
             <div class="modal_nav_btn"><img src="https://hear-th.com/web/upload/img/ico_bottom_plus.png"></div>
             <div class="modal_nav_btn_pop"><img src="https://hear-th.com/web/upload/img/ico_chat.png"></div>
         </div>
     </div>
+    <!-- 팝업 네비게이션 -->
 
+    <!-- 모든 close 버튼에 id="modal_close" 추가 -->
+
+    <div id="new_fixed">
     <div id="fitWrap" class="active">
         <div id="fitstartWrap">
             <div class="fit-start">
-                <p class="close"><a href="#none"><img src="img/start_test_close.png" alt=""></a></p>
+                <p class="close" id="modal_close"><a href="#none"><img src="img/start_test_close.png" alt=""></a></p>
                 <div class="start-con">
                     <p class="tit">
-                        Hello, I'm 히이즈 <br><br>
+                        Hello, I'm 뉴럴냅스 <br>
                         너에게 필요한 건강기능식품을<br>
                         추천해주려고 북극에서 왔어요.
                     </p>
@@ -51,7 +55,7 @@
         <div id="fittestWrap">
             <div class="fittest">
                 <div class="inner">
-                    <p class="close"><a href="#none"><img src="img/start_test_close.png" alt=""></a></p>
+                    <p class="close" id="modal_close"><a href="#none"><img src="img/start_test_close.png" alt=""></a></p>
 
                     <!-- s:fit-content-wrap -->
                     <div class="fit-content-wrap">
@@ -63,24 +67,28 @@
                                 <div class="fit-question first" step="1">
                                     <div class="fit-profile">
                                         <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
+                                        <p class="name">뉴럴냅스</p>
                                     </div>
             
                                     <div class="fit-msg">
                                         <div class="fit-msg-item up">
                                             <p>
-                                                안녕하세요, 당신에게 꼭 맞는 건강기능식품을<br>
-                                                추천해주려고 온 ‘히이즈’에요
+                                                안녕하세요, 뉴럴냅스 코칭 닥터입니다.<br>
                                             </p>
                                         </div>
                                         <div class="fit-msg-item up">
                                             <p>
-                                                오직, 당신에게 맞춘 추천
+                                                당신의 현재 바이오리듬 밸런스를<br>체크해보고 싶으신가요?
                                             </p>
                                         </div><br>
                                         <div class="fit-msg-item up">
                                             <p>
-                                                받아보실래요?
+                                                당신의 상태를 진단해보고 가장 필요한<br>루틴 솔루션을 알려드릴게요.
+                                            </p>
+                                        </div><br>
+                                        <div class="fit-msg-item up">
+                                            <p>
+                                                테스트를 진행하시겠습니까?
                                             </p>
                                         </div>
                                     </div>
@@ -98,18 +106,18 @@
                                 <div class="fit-question" step="2">
                                     <div class="fit-profile">
                                         <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
+                                        <p class="name">뉴럴냅스</p>
                                     </div>
             
                                     <div class="fit-msg">
                                         <div class="fit-msg-item">
                                             <p>
-                                                너무 반가워요!
+                                                좋습니다. 질문 드릴게요~
                                             </p>
                                         </div><br>
                                         <div class="fit-msg-item">
                                             <p>
-                                                전 남자에요, 당신은요?
+                                                당신의 성별은 어떻게 되시나요?
                                             </p>
                                         </div>
                                     </div>
@@ -127,119 +135,132 @@
                                 <div class="fit-question" step="3">
                                     <div class="fit-profile">
                                         <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
+                                        <p class="name">뉴럴냅스</p>
                                     </div>
             
                                     <div class="fit-msg">
                                         <div class="fit-msg-item">
                                             <p>
-                                                나이가 어떻게 되시나요?
+                                                현재 나이가 어떻게 되시나요?
                                             </p>
                                         </div>
                                     </div>
                                 </div> 
             
-                                <div class="fit-choice age-choice" step="3">
+                                <div class="fit-choice age-choice" step="3" style="display: flex;justify-content: right;flex-wrap: wrap;">
                                     <div class="fit-choice-item" value="10대">
-                                        <a href="javascript:void(0)">10~19세</a>
+                                        <a href="javascript:void(0)">10대</a>
                                     </div>
                                     <div class="fit-choice-item" value="20대">
-                                        <a href="javascript:void(0)">20~29세</a>
+                                        <a href="javascript:void(0)">20대</a>
                                     </div><br>
                                     <div class="fit-choice-item" value="30대">
-                                        <a href="javascript:void(0)">30~39세</a>
+                                        <a href="javascript:void(0)">30대</a>
                                     </div>
                                     <div class="fit-choice-item" value="40대">
-                                        <a href="javascript:void(0)">40~49세</a>
+                                        <a href="javascript:void(0)">40대</a>
                                     </div><br>
                                     <div class="fit-choice-item" value="50대">
-                                        <a href="javascript:void(0)">50~64세</a>
+                                        <a href="javascript:void(0)">50대</a>
                                     </div>
-                                    <div class="fit-choice-item" value="60대 이상">
-                                        <a href="javascript:void(0)">65세 이상</a>
+                                    <div class="fit-choice-item" value="60대">
+                                        <a href="javascript:void(0)">60대</a>
+                                    </div>
+                                    <div class="fit-choice-item" value="70대 이상">
+                                        <a href="javascript:void(0)">70대 이상</a>
                                     </div>
                                 </div>
-            
+
+                                <!-- s:기본 질문 -->
                                 <div class="fit-question" step="4">
                                     <div class="fit-profile">
                                         <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
+                                        <p class="name">뉴럴냅스</p>
                                     </div>
             
                                     <div class="fit-msg">
                                         <div class="fit-msg-item">
                                             <p>
-                                                어디가 불편하신가요?
-                                            </p>
-                                        </div>
-                                        <div class="fit-msg-item">
-                                            <p>
-                                                건강이 문제되는 우선순위로 1,2,3순위 선택해주세요
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div> 
-
-                                <!-- s:결과지 -->
-                                <div class="fit-choice result-fit" step="4">
-                                    <div class="fit-choice-item" answer="2">
-                                        <a href="javascript:void(0)">테스트1</a>
-                                    </div>
-                                    <div class="fit-choice-item" answer="3">
-                                        <a href="javascript:void(0)">테스트2</a>
-                                    </div>
-                                    <div class="fit-choice-item" answer="4">
-                                        <a href="javascript:void(0)">테스트3</a>
-                                    </div>
-                                    <div class="reset">
-                                        <a href="javascript:void(0)">다시 선택하기</a>
-                                    </div>
-                                </div>
-                                <!-- //e:결과지 -->
-
-                                <!-- s:기본 질문 -->
-                                <div class="fit-question" step="5">
-                                    <div class="fit-profile">
-                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
-                                    </div>
-            
-                                    <div class="fit-msg">
-                                        <div class="fit-msg-item">
-                                            <p>
-                                                눈이 건조, 떨림, 침침해서 <br>
-                                                불편하신 적이 있나요?
+                                                잠들어도 새벽에 가끔<br>깬 적이 있으신가요?
                                             </p>
                                         </div>
                                     </div>
                                 </div> 
             
-                                <div class="fit-choice" step="5">
-                                    <div class="fit-choice-item">
+                                <div class="fit-choice" step="4">
+                                    <div class="fit-choice-item" answer="1">
                                         <a href="javascript:void(0)">YES</a>
                                     </div>
                                     <div class="fit-choice-item">
                                         <a href="javascript:void(0)">NO</a>
                                     </div>
                                 </div>
-            
-                                <div class="fit-question" step="6">
+
+                                <div class="fit-question" step="5">
                                     <div class="fit-profile">
                                         <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
+                                        <p class="name">뉴럴냅스</p>
                                     </div>
             
                                     <div class="fit-msg">
                                         <div class="fit-msg-item">
                                             <p>
-                                                많이 피곤하다고 느끼시나요? 
+                                                8시간을 자도 아침에 졸리고<br>피곤함을 느끼나요? 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="fit-choice" step="5">
+                                    <div class="fit-choice-item" answer="1">
+                                        <a href="javascript:void(0)">YES</a>
+                                    </div>
+                                    <div class="fit-choice-item">
+                                        <a href="javascript:void(0)">NO</a>
+                                    </div>
+                                </div>
+
+                                <div class="fit-question" step="6">
+                                    <div class="fit-profile">
+                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
+                                        <p class="name">뉴럴냅스</p>
+                                    </div>
+            
+                                    <div class="fit-msg">
+                                        <div class="fit-msg-item">
+                                            <p>
+                                                불규칙한 일상으로 생활리듬을<br>정상적으로 되돌리고 싶은가요? 
                                             </p>
                                         </div>
                                     </div>
                                 </div> 
 
                                 <div class="fit-choice" step="6">
+                                    <div class="fit-choice-item" answer="1">
+                                        <a href="javascript:void(0)">YES</a>
+                                    </div>
                                     <div class="fit-choice-item">
+                                        <a href="javascript:void(0)">NO</a>
+                                    </div>
+                                </div>
+
+                                <div class="fit-question" step="7">
+                                    <div class="fit-profile">
+                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
+                                        <p class="name">뉴럴냅스</p>
+                                    </div>
+            
+                                    <div class="fit-msg">
+                                        <div class="fit-msg-item">
+                                            <p>
+                                                잠에 쉽게 들지 못하는 편인가요?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="fit-choice" step="7">
+                                    <div class="fit-choice-item" answer="2">
                                         <a href="javascript:void(0)">YES</a>
                                     </div>
                                     <div class="fit-choice-item">
@@ -248,23 +269,120 @@
                                 </div>
 
 
-                                <div class="fit-question" step="7">
+                                <div class="fit-question" step="8">
                                     <div class="fit-profile">
                                         <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
-                                        <p class="name">히이즈</p>
+                                        <p class="name">뉴럴냅스</p>
                                     </div>
             
                                     <div class="fit-msg">
                                         <div class="fit-msg-item">
                                             <p>
-                                                잦은 설사, 배아픔, 변비 등으로 장이 불편하신가요? 
+                                                잠들기 전 많은 생각과 고민으로 어려움을 느끼나요?
                                             </p>
                                         </div>
                                     </div>
                                 </div> 
 
-                                <div class="fit-choice" step="7">
+                                <div class="fit-choice" step="8">
+                                    <div class="fit-choice-item" answer="2">
+                                        <a href="javascript:void(0)">YES</a>
+                                    </div>
                                     <div class="fit-choice-item">
+                                        <a href="javascript:void(0)">NO</a>
+                                    </div>
+                                </div>
+
+
+                                <div class="fit-question" step="9">
+                                    <div class="fit-profile">
+                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
+                                        <p class="name">뉴럴냅스</p>
+                                    </div>
+            
+                                    <div class="fit-msg">
+                                        <div class="fit-msg-item">
+                                            <p>
+                                                잠이 안와서 스트레스와 우울감을 느낀 적이 있나요?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="fit-choice" step="9">
+                                    <div class="fit-choice-item" answer="2">
+                                        <a href="javascript:void(0)">YES</a>
+                                    </div>
+                                    <div class="fit-choice-item">
+                                        <a href="javascript:void(0)">NO</a>
+                                    </div>
+                                </div>
+
+                                <div class="fit-question" step="10">
+                                    <div class="fit-profile">
+                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
+                                        <p class="name">뉴럴냅스</p>
+                                    </div>
+            
+                                    <div class="fit-msg">
+                                        <div class="fit-msg-item">
+                                            <p>
+                                                밤낮이 바뀐 올빼미 생활을 하고 있나요?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="fit-choice" step="10">
+                                    <div class="fit-choice-item" answer="3">
+                                        <a href="javascript:void(0)">YES</a>
+                                    </div>
+                                    <div class="fit-choice-item">
+                                        <a href="javascript:void(0)">NO</a>
+                                    </div>
+                                </div>
+
+                                <div class="fit-question" step="11">
+                                    <div class="fit-profile">
+                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
+                                        <p class="name">뉴럴냅스</p>
+                                    </div>
+            
+                                    <div class="fit-msg">
+                                        <div class="fit-msg-item">
+                                            <p>
+                                                항상 잠이 부족하다고 느끼나요?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="fit-choice" step="11">
+                                    <div class="fit-choice-item" answer="3">
+                                        <a href="javascript:void(0)">YES</a>
+                                    </div>
+                                    <div class="fit-choice-item">
+                                        <a href="javascript:void(0)">NO</a>
+                                    </div>
+                                </div>
+
+                                <div class="fit-question" step="12">
+                                    <div class="fit-profile">
+                                        <p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p>
+                                        <p class="name">뉴럴냅스</p>
+                                    </div>
+            
+                                    <div class="fit-msg">
+                                        <div class="fit-msg-item">
+                                            <p>
+                                                점점 취침시간이 늦어지고 새벽에 깨는 현상이 있나요?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="fit-choice" step="12">
+                                    <div class="fit-choice-item" answer="3">
                                         <a href="javascript:void(0)">YES</a>
                                     </div>
                                     <div class="fit-choice-item">
@@ -272,10 +390,6 @@
                                     </div>
                                 </div>
                                 <!-- //e:기본 질문 -->
-                                
-                                <!-- 기본 질문 이후에 자신이 선택한 interest (js 28번) 질문이 나온다 -->
-            
-                               
                             </div>
                             <!-- //e:fit-content -->
                         </div>
@@ -288,7 +402,7 @@
                     <!-- s:로딩화면 -->
                     <div class="fit-loading">
                         <div class="inn">
-                            <p class="title">히이즈가 당신을 <br>분석하고 있어요</p>
+                            <p class="title">뉴럴냅스가 당신을 <br>분석하고 있어요</p>
 
                             <div class="igloo">
                                 <img src="img/igloo.gif" alt="">
@@ -307,7 +421,7 @@
 
                             <p class="desc">
                                 지금 나에게 필요한 제품을 추천해주는<br>
-                                남성헬스케어 전문 브랜드 '히이즈' <br><br>
+                                남성헬스케어 전문 브랜드 '뉴럴냅스' <br><br>
                             </p>
 
 
@@ -355,7 +469,7 @@
         <!-- 결과 도출  -->
         <div id="fitresultWrap">
             <div class="inner">
-                <p class="close"><a href="#none"><img src="img/start_test_close.png" alt=""></a></p>
+                <p class="close" id="modal_close"><a href="#none"><img src="img/start_test_close.png" alt=""></a></p>
 
                 
                 <div class="tit-wrap">
@@ -372,8 +486,8 @@
                         <!-- 추천 1번 -->
                         <div class="fit-result type1 swiper-slide" result="1">
                             <p class="rank">추천1</p>
-                            <p class="subcopy">현대인 맞춤 올케어</p>
-                            <p class="name">히얼스 데일리필팩 ㅣ 30일분</p>
+                            <p class="subcopy">3단계수면부족 타입</p>
+                            <p class="name">코어슬립 글리신</p>
     
                             <p class="img">
                                 <img src="img/img_pill_thumb_01.jpg" alt="">
@@ -411,8 +525,8 @@
                         <!-- 추천 2번 -->
                         <div class="fit-result type2 swiper-slide" result="2">
                             <p class="rank">추천2</p>
-                            <p class="subcopy">쉴 틈 없이 바쁜 우리 몸 <br>항산화&높은 혈압 감소 건강에 집중할 차례 </p>
-                            <p class="name">항산화 & 베이직 케어 SET | 30일분</p>
+                            <p class="subcopy">스트레스불균형 타입</p>
+                            <p class="name">비포슬립 락투신</p>
     
                             <p class="img">
                                 <img src="img/img_pill_thumb_02.jpg" alt="">
@@ -438,8 +552,8 @@
                         <!-- 추천 3번 -->
                         <div class="fit-result type3 swiper-slide" result="3">
                             <p class="rank">추천3</p>
-                            <p class="subcopy">미루지 말고 오늘부터 <br>체지방 감소에 집중할 차례 </p>
-                            <p class="name">체지방 감소 & 베이직 케어 SET | 30일분</p>
+                            <p class="subcopy">체내시계고장 타입</p>
+                            <p class="name">글리신,락투신 세트</p>
     
                             <p class="img">
                                 <img src="img/img_pill_thumb_03.jpg" alt="">
@@ -517,7 +631,7 @@
         </div>
 
     </div>
-
+    </div>
 
     <script src="modal.js"></script>
     
