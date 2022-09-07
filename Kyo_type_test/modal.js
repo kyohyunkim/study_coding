@@ -41,6 +41,7 @@ function pick_up() {
     setTimeout(function () { $('.pick .fit-choice.active').addClass('up'); }, 800);
 }
 
+//질문 랜덤 출력
 let a = 0;
 let b = 0;
 let c = 0;
@@ -78,12 +79,6 @@ function whatMax(){
         recommend.push(3);
     }
 }
-// 테스트 코드
-// var interest01 = `
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>예전보다 활력(에너지)이 많이 떨어지셨나요?</p></div></div></div><div class="fit-choice sub-first"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>무기력해 보인다는 말을 자주 들으시나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>혈압이 높아지는 일이 잦으신가요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// `
 
 const shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -92,14 +87,18 @@ const shuffleArray = array => {
     }
 }
 
+//yes 버튼에 pluseA,B,C 함수 넣어서 값을 넘겨줌 
+//3단계수면부족 타입_코어슬립 글리신 제안
 let coreSleep1 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠들어도 새벽에 가끔 깬 적이 있으신가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 let coreSleep2 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>8시간을 자도 아침에 졸리고 피곤함을 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 let coreSleep3 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>불규칙한 일상으로 생활리듬을<br>정상적으로 되돌리고 싶은가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 
+//스트레스불균형 타입_비포슬립 락투신 제안
 let beforeSleep1 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠에 쉽게 들지 못하는 편인가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 let beforeSleep2 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠들기 전 많은 생각과 고민으로 어려움을 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 let beforeSleep3 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠이 안와서 스트레스와 우울감을 느낀 적이 있나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 
+//체내시계고장 타입_글리신,락투신 세트 제안
 let set1 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>밤낮이 바뀐 올빼미 생활을 하고 있나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 let set2 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>항상 잠이 부족하다고 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
 let set3 = `<div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>점점 취침시간이 늦어지고 새벽에 깨는 현상이 있나요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>`
@@ -107,26 +106,12 @@ let set3 = `<div class="fit-question"><div class="fit-profile"><p class="thumb">
 let jindan = [coreSleep1, coreSleep2, coreSleep3, beforeSleep1, beforeSleep2, beforeSleep3, set1, set2];
 shuffleArray(jindan);
 
-// var interest01 = `
-// <!--3단계수면부족 타입_코어슬립 글리신 제안-->
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠들어도 새벽에 가끔 깬 적이 있으신가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>8시간을 자도 아침에 졸리고 피곤함을 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>불규칙한 일상으로 생활리듬을<br>정상적으로 되돌리고 싶은가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseA();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-
-// <!--스트레스불균형 타입_비포슬립 락투신 제안-->
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠에 쉽게 들지 못하는 편인가요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠들기 전 많은 생각과 고민으로 어려움을 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>잠이 안와서 스트레스와 우울감을 느낀 적이 있나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseB();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-
-// <!--체내시계고장 타입_글리신,락투신 세트 제안-->
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>밤낮이 바뀐 올빼미 생활을 하고 있나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>항상 잠이 부족하다고 느끼나요?</p></div></div></div><div class="fit-choice"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// <div class="fit-question"><div class="fit-profile"><p class="thumb"><img src="../img/img_profile_thumb.png" alt=""></p><p class="name">히이즈</p></div><div class="fit-msg"><div class="fit-msg-item"><p>점점 취침시간이 늦어지고 새벽에 깨는 현상이 있나요?</p></div></div></div><div class="fit-choice last"><div class="fit-choice-item"><a href="javascript:void(0)" onclick="pluseC();">YES</a></div><div class="fit-choice-item"><a href="javascript:void(0)">NO</a></div></div>
-// `
 
 $('.fit-content').append(jindan);
-$('.fit-content').append(set3);
+$('.fit-content').append(set3); //set3이 last 클래스를 가지고 있기때문에 항상 마지막에!
 
+
+// fit-choice-item (YES , NO)누르면 다음 질문 실행
 $('.fit-content').on('click', '.fit-choice-item', function () {
     var _this = $(this),
         _thisA = $(this).parent(),
@@ -145,7 +130,7 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
 
     if (_thisA.hasClass('last')) {
 
-        //끝나따 이놈아
+        //질문 끝나면 실행하는 함수
         if (!_nextQ.hasClass('active')) {
             $('.fit-content-wrap').hide();
             $('.fit-result-wrap').show();
@@ -155,7 +140,7 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
             function counterFn() {
                 id0 = setInterval(count0Fn, 300);
                 function count0Fn() {
-                    cnt0 = cnt0 + 13;
+                    cnt0 = cnt0 + 13; // 13만큼 증가하기
                     if (cnt0 > 100) {
                         clearInterval(id0);
                         $('.fit-loading').hide();
@@ -182,13 +167,13 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
 
     $('.btn-result-show').click(function () {
         $('#fitWrap').removeClass('active');
-        //$('#fittestWrap .fittest').removeClass('active');
         $('.fit-result-summary').hide();
         $('#fitresultWrap').addClass('active');
         $('#fittestWrap .fittest').removeClass('active');
 
+        //마지막 결과 도출 함수
         whatMax();
-        recommend.forEach(max => {$(".fit-result.type"+max).addClass('active');});
+        recommend.forEach(max => {$(".fit-result.type"+max).addClass('active');}); 
 
         if($(".fit-result.type1").hasClass('active')){
             $('#fitresultWrap').addClass('daily');
@@ -202,31 +187,4 @@ $('.fit-content').on('click', '.fit-choice-item', function () {
             $('#fitresultWrap').removeClass('daily');
         }
     });
-});
-
-var ww = $(window).width();
-var swiper_result = undefined;
-
-function initSwiper() {
-
-    if (ww > 991 && swiper_result == undefined) {
-        swiper_result = new Swiper('.fit-result-list-wrap', {
-            slidesPerView: 'auto',
-            spaceBetween: 135,
-            pagination: {
-                el: ".fit-result-pagination",
-                type: "progressbar",
-            }
-        });
-    } else if (ww <= 991 && swiper_result != undefined) {
-        swiper_result.destroy();
-        swiper_result = undefined;
-    }
-}
-
-initSwiper();
-
-$(window).on('resize', function () {
-    ww = $(window).width();
-    initSwiper();
 });
