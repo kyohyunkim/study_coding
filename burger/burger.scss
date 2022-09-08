@@ -1,0 +1,348 @@
+:root {
+    --font-size: 1; // Scale is using font-size in rems;
+    --color1: #f0ffff;
+    --borderRadius: 1em;
+  }
+  
+  .burger {
+    font-size: var(--font-size);
+    cursor: pointer;
+    padding: 3em 1.5em; ///////////////// touch area size
+    &.showHitArea {
+      border: 1px solid olive;
+    }
+    & > div {
+      width: 4em;
+      height: 0.5em;
+      border-radius: var(--borderRadius);
+      background: var(--color1);
+      &::before,
+      &::after {
+        transition: font-size 0s;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 4em;
+        height: 0.5em;
+        background: var(--color1);
+        border-radius: var(--borderRadius);
+      }
+      &::before {
+        margin-top: -1.5em;
+      }
+      &::after {
+        margin-top: 1.5em;
+      }
+    }
+  }
+  
+  .burger1 {
+    transition: all 0.7s, font-size 0s;
+    transition-timing-function: cubic-bezier(0.68, -0.35, 0.265, 1.35);
+    & > div {
+      transition: all 0.1s 0.3s, font-size 0s;
+      &::before,
+      &::after {
+        transition: all 0.3s 0.2s, font-size 0s;
+      }
+    }
+    &.toggled {
+      transform: rotate(180deg);
+      > div::before {
+        transform: rotate(45deg) translate(1.1em, 1em);
+      }
+      > div {
+        background: transparent;
+      }
+      > div::after {
+        transform: rotate(-45deg) translate(1.1em, -1em);
+      }
+    }
+  }
+  
+  .burger2 {
+    & > div {
+      transition: background 0.4s, font-size 0s;
+      &::before,
+      &::after {
+        transition: font-size 0s;
+        transform-origin: center center;
+      }
+    }
+    &.toggled {
+      > div::before {
+        animation: burg2top 0.4s linear forwards;
+      }
+      > div {
+        background: transparent;
+      }
+      > div::after {
+        animation: burg2bottom 0.4s linear forwards;
+      }
+    }
+    &.unToggled {
+      > div::before {
+        animation: burg2topReset 0.4s linear forwards;
+      }
+      > div {
+        background: var(--color1);
+      }
+      > div::after {
+        animation: burg2bottomReset 0.4s linear forwards;
+      }
+    }
+  
+    @keyframes burg2top {
+      0% {
+      }
+      20% {
+        margin-top: 0em;
+        transform: rotate(0deg);
+      }
+      60% {
+        margin-top: 0em;
+        transform: rotate(55deg);
+      }
+      100% {
+        margin-top: 0em;
+        transform: rotate(45deg);
+      }
+    }
+  
+    @keyframes burg2bottom {
+      0% {
+      }
+      20% {
+        margin-top: 0em;
+        transform: rotate(0deg);
+      }
+      60% {
+        margin-top: 0em;
+        transform: rotate(-55deg);
+      }
+      100% {
+        margin-top: 0em;
+        transform: rotate(-45deg);
+      }
+    }
+  
+    @keyframes burg2topReset {
+      0% {
+        margin-top: 0em;
+        transform: rotate(45deg);
+      }
+      20% {
+        transform: rotate(0deg);
+      }
+      60% {
+        margin-top: 1.7em;
+        transform: rotate(0deg);
+      }
+      100% {
+        margin-top: 1.5em;
+        transform: rotate(0deg);
+      }
+    }
+  
+    @keyframes burg2bottomReset {
+      0% {
+        margin-top: 0em;
+        transform: rotate(-45deg);
+      }
+      20% {
+        transform: rotate(0deg);
+      }
+      60% {
+        margin-top: -1.7em;
+        transform: rotate(0deg);
+      }
+      100% {
+        margin-top: -1.5em;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  
+  .burger3 {
+    transition: all 0.7s, font-size 0s;
+    transition-timing-function: cubic-bezier(0.68, 0, 0.265, 1.25);
+    & > div {
+      transition: all 0.5s, font-size 0s;
+      &::before,
+      &::after {
+        transition: all 0.4s 0.2s, font-size 0s;
+        transform-origin: left top;
+      }
+    }
+    &.toggled {
+      transform: rotate(180deg);
+      > div::before {
+        width: 3em;
+        transform: rotate(-45deg) translate(-1.4em, 1.1em);
+      }
+      > div::after {
+        width: 3em;
+        transform: rotate(45deg) translate(-1em, -1.2em);
+      }
+    }
+  }
+  
+  .burger4 {
+    & > div {
+      transition: all 0.4s, font-size 0s;
+      &::before,
+      &::after {
+        transition: font-size 0s;
+        transform-origin: center center;
+      }
+    }
+    &.toggled {
+      > div::before {
+        animation: burg4top 0.4s linear forwards;
+      }
+      > div {
+        animation: burg4 0.4s linear forwards;
+      }
+      > div::after {
+        animation: burg4bottom 0.4s linear forwards;
+      }
+    }
+  
+    &.unToggled {
+      > div::before {
+        animation: burg4topReset 0.4s linear forwards;
+      }
+      > div {
+        background: var(--color1);
+        animation: burg4reset 0.4s linear forwards;
+      }
+      > div::after {
+        animation: burg4bottomReset 0.4s linear forwards;
+      }
+    }
+    @keyframes burg4 {
+      50% {
+        transform: rotate(0deg);
+        background: var(--color1);
+      }
+      100% {
+        transform: rotate(360deg);
+        background: #f0ffff00;
+      }
+    }
+    @keyframes burg4top {
+      50% {
+        margin-top: 0;
+        transform: rotate(0deg);
+      }
+      100% {
+        margin-top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  
+    @keyframes burg4bottom {
+      50% {
+        margin-top: 0;
+        transform: rotate(0deg);
+      }
+      100% {
+        margin-top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  
+    @keyframes burg4reset {
+      0% {
+        transform: rotate(0deg);
+        background: #f0ffff00;
+      }
+      50% {
+        transform: rotate(0deg);
+        background: #f0ffff00;
+      }
+      100% {
+        transform: rotate(-360deg);
+        background: #f0ffff;
+      }
+    }
+    @keyframes burg4topReset {
+      0% {
+        transform: rotate(45deg);
+        margin-top: 0;
+      }
+      50% {
+        transform: rotate(0deg);
+        margin-top: 0em;
+      }
+      100% {
+        transform: rotate(0deg);
+        margin-top: 1.5em;
+      }
+    }
+  
+    @keyframes burg4bottomReset {
+      0% {
+        transform: rotate(-45deg);
+        margin-top: 0;
+      }
+      50% {
+        margin-top: 0;
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(0deg);
+        margin-top: -1.5em;
+      }
+    }
+  }
+  
+  //////////////////////////////////////////////////
+  // Display Stuff
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+  
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background: #24273b;
+    height: 100%;
+    color: #9c9cab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4rem;
+  }
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  section {
+    width: 15rem;
+    height: 15rem;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="timer.js"></script>
+</head>
+
+<body>
+    <div class="top_desc" module="product_detail">
+        <div id="d_timer">
+            <p id="timer_wrap"></p>
+        </div>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+        *{font-family: 'Noto Sans KR', sans-serif;}
+        #d_timer{border-radius:25px; border:2px dotted #eee; padding:10px; margin:0 20px;}
+        #timer_wrap{text-align:center; font-size:16px; font-weight:300; letter-spacing: -1px;}
+        #timer_wrap .time_text{display: none;}
+        #timer_wrap .time_text .bold_text{font-weight:500!important;}
+        #timer_wrap .time_text.active{display:inline-block;}
+    </style>
+</body>
+
+</html>
