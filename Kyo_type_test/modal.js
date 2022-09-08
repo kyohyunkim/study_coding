@@ -1,3 +1,8 @@
+
+close_btn.addEventListener('click',function(){
+    typing_text.classList.add('active');
+})
+
 //modal// 
 const modalNavBtn =  document.querySelector('.modal_nav_btn');
 const modalNav =  document.querySelector('.modal_nav');
