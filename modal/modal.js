@@ -1,5 +1,8 @@
 window.onload = function(){
-    
+   
+close_btn.addEventListener('click',function(){
+    typing_text.classList.add('active');
+})
 //modal// 
 const modalNavBtn =  document.querySelector('.modal_nav_btn');
 const modalNav =  document.querySelector('.modal_nav');
@@ -11,6 +14,10 @@ modalNavBtn.addEventListener('click',function(){
 modalPop.addEventListener('click',function(){
     new_fixed.classList.add('active');
 })
+test_btn.addEventListener('click',function(){
+    new_fixed.classList.add('active');
+})
+
 for(let m=0; m<modal_close.length; m++){
 modal_close[m].addEventListener('click',function(){new_fixed.classList.remove('active');})
 }

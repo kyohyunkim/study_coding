@@ -351,3 +351,70 @@ body::-webkit-scrollbar-track{ background:#ded8c9;}
         margin-top: 50px;
     }
 }
+
+
+/* 말풍선 */
+.typing_text{
+    position: fixed;
+    bottom:60px;right:60px;
+    background-color: #0aa86c;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 1s;
+    animation: typing_move 1s forwards;
+}
+.typing_text.active{animation: typing_move_close 1s forwards;}
+.close_btn{position: absolute;top:10px;right:10px;width:15px;cursor: pointer;}
+.typing_text ul{color:#fff;font-size: 13px;}
+.typing_text ul .test_btn{
+    background-color: rgba(23,16,16,.1);
+    font-size: 13px;
+    line-height: 1.48;
+    letter-spacing: -.02em;
+    padding: 4px 7px 4px 12px;
+    margin-top: 9px;
+    border-radius: 28px;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.test_btn img{width:17px;}
+.typing_text ul .test_btn:hover{background-color: rgba(23,16,16,.4);}
+
+
+.typing1{white-space: nowrap;opacity: 0;height:0;animation: typing_text 1s forwards;animation-delay: 1s;}
+.typing2{white-space: nowrap;opacity: 0;height:0;animation: typing_text 1s forwards;animation-delay: 1.5s;}
+.typing1::before {
+    content: "당신에게 가장 필요한";
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    animation: typing .5s steps(9) forwards;
+    animation-delay: 1s;
+}
+.typing2::before {
+    content: "솔루션을 알려드릴게요!";
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    animation: typing .5s steps(11) forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes typing_move{
+    0%{right:-100%;}
+    100%{right:50px;}
+}
+@keyframes typing_move_close{
+    0%{right:50px;}
+    100%{right:-100%;}
+}
+@keyframes typing_text{
+    100%{opacity: 1;height:100%;}
+}
+@keyframes typing{
+0% {width: 0%;}
+100%{width: 100%;}
+}
