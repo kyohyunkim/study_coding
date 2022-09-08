@@ -3,6 +3,10 @@ window.onload = function(){
 close_btn.addEventListener('click',function(){
     typing_text.classList.add('active');
 })
+test_btn.addEventListener('click',function(){
+    new_fixed.classList.add('active');
+})
+
 //modal// 
 const modalNavBtn =  document.querySelector('.modal_nav_btn');
 const modalNav =  document.querySelector('.modal_nav');
