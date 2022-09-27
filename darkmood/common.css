@@ -1,0 +1,25 @@
+html {
+    --bg-color: #fff;
+    --text-color: #343434;
+    --link-color: #0000ee;
+    --icon-color:#000;
+}
+
+html.dark {
+    --bg-color: #121212;
+    --text-color: #bbb;
+    --link-color: #3ea6ff;
+    --icon-color:#fff;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+.icon{
+    fill:var(--icon-color);
+  }

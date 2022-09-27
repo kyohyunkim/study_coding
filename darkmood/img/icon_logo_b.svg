@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30.472" viewBox="0 0 30 30.472">
+  <style>
+    .icon{
+      fill:var(--icon-color);
+    }
+  </style>
+  <g id="그룹_19979" data-name="그룹 19979" transform="translate(0 30.471)">
+    <g id="그룹_4" data-name="그룹 4" transform="translate(0.001 -30.471)">
+      <path class="icon" id="패스_3" data-name="패스 3" d="M.176,0-5.072,5.333,19.676,30.47l5.25-5.332v0L.179,0Z" transform="translate(5.072)"/>
+    </g>
+    <g id="그룹_5" data-name="그룹 5" transform="translate(0 -17.056)">
+      <path class="icon" id="패스_4" data-name="패스 4" d="M0,0V12.092H7.177V-4.965Z" transform="translate(0 4.965)"/>
+    </g>
+    <g id="그룹_6" data-name="그룹 6" transform="translate(22.822 -30.44)">
+      <path class="icon" id="패스_5" data-name="패스 5" d="M0,0V17.059l7.178-4.967V0Z"/>
+    </g>
+  </g>
+</svg>
