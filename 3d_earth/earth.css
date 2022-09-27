@@ -1,0 +1,86 @@
+
+  body {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+      height: 300px;
+      width: 300px;
+      background: #fff;
+      border-radius: 50%;
+      position: relative;
+  }
+  
+  .circle::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(circle at 50px 100px, transparent, #000);
+      border-radius: 50%;
+      opacity: 1;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.3);
+  }
+  
+  .map {
+    height: 100%;
+    width: 100%;
+    background: url('moon.svg') repeat-x;
+    border-radius: 50%;
+    background-size: auto 100%;
+    background-position: center;
+    animation: world linear 75s infinite;
+    opacity: .5;
+  }
+  
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom:0;left:0;
+    background: linear-gradient(120deg, rgba(255,255,255,.1)0%, rgba(0,0,0,.4) 5%, rgba(0,0,0,1) 100%);
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius:50%;
+  }
+  
+  
+  @keyframes world {
+    0% {
+      background-position: 5000px 0; 
+    }
+    100% {
+      background-position: 0 0; 
+    } 
+  }
+
+  .gra {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+      inset 0 0px 50px #fff,
+      inset 20px 0px 80px rgba(255, 255, 255, .5),
+      inset -30px 0px 80px rgb(0, 0, 0),
+      0 0 70px rgba(255,255,255,0.5),
+      0px 0 0px rgb(255, 255, 255,1);
+  }
