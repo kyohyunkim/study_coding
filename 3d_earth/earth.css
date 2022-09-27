@@ -22,6 +22,7 @@
       background: #fff;
       border-radius: 50%;
       position: relative;
+      transform: rotate(10deg);
   }
   
   .circle::before {
@@ -41,7 +42,7 @@
   .map {
     height: 100%;
     width: 100%;
-    background: url('moon.svg') repeat-x;
+    background: url('moon.png') repeat-x;
     border-radius: 50%;
     background-size: auto 100%;
     background-position: center;
