@@ -1,0 +1,17 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f4f7ff;
+}
+
+canvas {
+  height: 100vh;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+button {
+  display: none;
+}
+/*# sourceMappingURL=submit.css.map */

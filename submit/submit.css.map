@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACL,sBAAsB,EAAE,WAAW;EACnC,gBAAgB,EAAE,OAAO;CACxB;;AAED,AAAA,MAAM,CAAC;EACP,MAAM,EAAE,KAAK;EACb,cAAc,EAAE,IAAI;EACpB,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,CAAC;CACT;;AACD,AAAA,MAAM,CAAA;EAAC,OAAO,EAAC,IAAI;CAAG",
+    "sources": [
+        "submit.scss"
+    ],
+    "names": [],
+    "file": "submit.css"
+}
