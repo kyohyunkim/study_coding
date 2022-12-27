@@ -14,6 +14,9 @@ modalNavBtn.addEventListener('click',function(){
 modalPop.addEventListener('click',function(){
     new_fixed.classList.add('active');
 })
+test_btn.addEventListener('click',function(){
+    new_fixed.classList.add('active');
+})
 for(let m=0; m<modal_close.length; m++){
 modal_close[m].addEventListener('click',function(){new_fixed.classList.remove('active');})
 }

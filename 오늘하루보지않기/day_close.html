@@ -11,7 +11,7 @@
     <div id="pop">
         <div class="cont">
             <p>레이어 팝업 입니다.</p> 
-            <a href="#"><img class="thumb" src="./images/popup3.png" usemap="#pop" /></a>
+            <a href="#"></a>
         </div>
         <div class="close">
             <form method="post" action="" name="pop_form">
@@ -19,10 +19,30 @@
                 <span id="close">Close</span>
             </form>
         </div>
-</div>
+        
+    </div>
 
 <script>
     // 쿠키 가져오기
+    var currentCookie = document.cookie;
+    var cookieCheck = currentCookie.indexOf('ABC')
+    if(cookieCheck > -1){
+        pop.style = "display:none";
+    } else{
+        pop.style = "display:block";
+    }
+
+    var date = new Date();
+    date.setDate(date.getDate() + 7);
+
+    var setCookie = '';
+    setCookie += 'CookieName = ABC;';
+    setCookie += 'expires =' + date.toDateString();
+    
+    document.cookie = setCookie;
+
+    
+
     var getCookie = function (cname) {
         var name = cname + "=";
         var ca = document.cookie.split(';');

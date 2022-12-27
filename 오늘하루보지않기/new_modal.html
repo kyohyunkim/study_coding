@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="modal">
+        <a href="javascript:;" class="closeTodayBtn" onclick="close">오늘하루열지않음</a>
+    </div>
+
+    <script>
+        // Get cookie function
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var x = 0;
+            while (x <= document.cookie.length) {
+                var y = (x + cookieName.length);
+                if (document.cookie.substring(x, y) == cookieName) {
+                    if ((lastChrCookie = document.cookie.indexOf(";", y)) == -1)
+                        lastChrCookie = document.cookie.length;
+                    return decodeURI(document.cookie.substring(y, lastChrCookie));
+                }
+                x = document.cookie.indexOf(" ", x) + 1;
+                if (x == 0)
+                    break;
+            }
+            return "";
+        }
+
+
+        // 하루동안 안열기 쿠키 저장
+        $(function close() {
+            var closeTodayBtn = $('.closeTodayBtn');
+            // 버튼의 클래스명은 closeTodayBtn
+
+            closeTodayBtn.click(function () {
+                setCookie("popup20150530", "end", 1);
+                // 하루동안이므로 1을 설정
+                window.close();
+                // 현재 열려있는 팝업은 닫으면서 쿠키값을 저장
+            });
+        });
+    </script>
+</body>
+
+</html>
